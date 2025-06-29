@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Steller landing page.">
+    <meta name="author" content="Devcrud">
+    <link rel="icon" type="image/png" href="assets/imgs/Double T 4C.png">
+    <title>Kaiser Hamid</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/steller.css">
+
+    <style>
+        /* Custom CSS for publication entry layout */
+        .publication-entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2em;
+        }
+        .publication-text {
+            flex: 1;
+            font-size: 0.9em;
+            margin-right: 1em;
+        }
+        .publication-image {
+            flex: 0 0 200px;
+        }
+        .publication-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            .publication-entry {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .publication-text {
+                margin-right: 0;
+                margin-bottom: 1em;
+            }
+            .publication-image {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" onload="onload()">
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h5 class="title">Kaiser Hamid</h5>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="publication.html">Publication</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="chk" onclick="darkmode()" />
+                        <label class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of page navigation -->
+
+    <!-- Publication section -->
+    <div class="container mt-5">
+        <div class="row text-center text-md-left">
+            <div class="col-12">
+                <h2 class="mb-4">Publication</h2>
+
+                <!-- Publication entry with flex layout -->
+                <div class="publication-entry">
+                    <!-- Publication details -->
+                    <div class="col-md-8 publication-text">
+                          <li>
+                            <b><a href="https://scholar.google.com/citations?user=rMcz-ckAAAAJ&hl=en">Kaiser Hamid</b>, <a href="https://scholar.google.com/citations?user=w6e-GSgAAAAJ&hl=zh-TW">Nade Liang</a>, PhD
+                            <i>“A New Evaluation Metric for Takeover Maneuver Quality: Comparing Human Drivers with Autonomous Driving Agents”</i>, Proceedings of 69th HFES International Annual Meeting (ASPIRE 2025)</a>
+                          </li>
+                        <li>
+                            <b><a href="https://scholar.google.com/citations?user=rMcz-ckAAAAJ&hl=en"> Kaiser Hamid </a></b>, Md Sayem Noor, <a href="https://scholar.google.com/citations?user=4Wr8T_sAAAAJ&hl=en">Annesha Enam</a>, PhD
+                            <i>“Assessing the Potential of Google Location History (GLH) data for Travel Behavior Research in the Context of Developing Country”</i>, Proceedings of <a href="https://ieee-itsc.org/2024/">27th IEEE International Conference on Intelligent Transportation Systems (IEEE ITSC 2024)</a>
+
+                            <!-- Buttons for PDF, Cite, and Presentation -->
+                            <div class="mt-3">
+                                <a class="btn btn-primary btn-sm" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10919638" target="_blank">PDF</a>
+                                <a class="btn btn-secondary btn-sm" href="https://ieeexplore.ieee.org/abstract/document/10919638" target="_blank">Cite</a>
+                                <a class="btn btn-info btn-sm" href="https://youtu.be/OyFG3QcIwJA?si=sDhVtBwUFGnX8LPJ" target="_blank">Presentation</a>
+                            </div>
+                        </li>
+                    </div>
+
+                    <!-- Image section aligned to text container height -->
+                    <div class="col-md-4 publication-image">
+                        <img src="assets/imgs/glh_mode_prediction.PNG" class="img-fluid" alt="Publication Image">
+                    </div>
+                </div>
+                <!-- End of publication entry -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <section class="section mt-3">
+        <div class="container mt-8">
+            <p class="copyright">© <em id="date">2024</em> Kaiser Hamid</p>
+        </div>
+        <p>
+            This page was last updated on :
+            <script type="text/javascript">
+                function lastModified() {
+                    var lastModDate = new Date(document.lastModified);
+                    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                    var formattedDate = months[lastModDate.getMonth()] + ' ' + lastModDate.getDate() + ', ' + lastModDate.getFullYear();
+                    document.write(formattedDate);
+                }
+                lastModified();
+            </script>
+        </p>
+    </section>
+
+    <!-- Core JavaScript -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Steller JS -->
+    <script src="assets/js/steller.js"></script>
+
+</body>
+
+</html>
